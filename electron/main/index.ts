@@ -44,12 +44,12 @@ async function createWindow() {
   win = new BrowserWindow({
     title: 'Main window',
     icon: join(process.env.PUBLIC, 'favicon.ico'),
-    autoHideMenuBar: true,
+    autoHideMenuBar: false,
     width:1300,
     height:900,
     webPreferences: {
       preload,
-      devTools:false,
+      devTools:true,
       // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
       // Consider using contextBridge.exposeInMainWorld
       // Read more on https://www.electronjs.org/docs/latest/tutorial/context-isolation

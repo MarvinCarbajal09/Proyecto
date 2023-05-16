@@ -1,6 +1,7 @@
 import { createRouter, RouteRecordRaw, createWebHistory } from "vue-router";
 import Auth from "../views/Auth.vue";
 import { IsAuth } from "../utils/persist";
+import Home from "../views/Home.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -8,6 +9,13 @@ const routes: RouteRecordRaw[] = [
     path: "/auth",
     component: Auth,
   },
+  {
+    name: "Home",
+    path: "/",
+    component: Home,
+  },
+
+
 ];
 
 const router = createRouter({
